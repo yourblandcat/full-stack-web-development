@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Generator</title>
+    
+</head>
+<body>
+    <div class="container">
+  <h1>Student Profile Generator</h1>
+
+  <!-- Input form -->
+  <label for="nameInput">Name</label>
+  <input type="text" id="nameInput" placeholder="e.g. Ravi Kumar">
+
+  <label for="rollInput">Roll Number</label>
+  <input type="text" id="rollInput" placeholder="e.g. A23126552001">
+
+  <label for="deptInput">Department</label>
+  <input type="text" id="deptInput" placeholder="e.g. CSE (AI & ML)">
+
+  <label for="cgpaInput">CGPA</label>
+  <input type="number" id="cgpaInput" step="0.01" min="0" max="10" placeholder="e.g. 8.42">
+
+  <button id="generateBtn">Generate Student Profile</button>
+
+  <p class="error" id="errorMsg"></p>
+
+  <!-- Profile card gets inserted here dynamically -->
+  <div id="profileContainer"></div>
+</div>
+</body>
+<script src="./script.js"></script>
+</html>

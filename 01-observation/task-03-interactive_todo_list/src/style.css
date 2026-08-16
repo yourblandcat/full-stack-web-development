@@ -1,0 +1,9 @@
+body { font-family: Arial, sans-serif; max-width: 420px; margin: 40px auto; }
+h1 { font-size: 22px; }
+#taskInput { width: 65%; padding: 6px; }
+#addBtn { padding: 6px 12px; }
+ul { list-style: none; padding: 0; }
+li { display: flex; justify-content: space-between; align-items: center;
+    padding: 8px; margin-top: 6px; border: 1px solid #ccc; }
+li span.done { text-decoration: line-through; color: gray; } /* completed style */
+li button { margin-left: 6px; }

@@ -1,0 +1,84 @@
+/* ================= Task 1: style.css ================= */
+/* Basic external styling for College Information Portal */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+header {
+    background-color: #002855;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #003f7d;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px 40px;
+}
+
+section {
+    background-color: #fff;
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+}
+
+th {
+    background-color: #003f7d;
+    color: #fff;
+}
+
+td, th {
+    padding: 8px;
+    text-align: center;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 15px;
+}
+
+footer {
+    text-align: center;
+    background-color: #002855;
+    color: #fff;
+    padding: 15px;
+}

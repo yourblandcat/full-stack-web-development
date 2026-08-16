@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!-- 
+  TASK 1: College Information Portal
+  Concepts Covered: HTML5 Structure, Text Formatting, Lists, Tables, Images,
+  Forms, Semantic Elements, HTML5 Input Types, Audio & Video
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Information Portal</title>
+    <!-- External CSS linked here -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- ============ HTML5 SEMANTIC ELEMENT: HEADER ============ -->
+    <header>
+        <h1>Welcome to ABC College of Engineering</h1>
+        <p>College Information Portal</p>
+    </header>
+
+    <!-- ============ HTML5 SEMANTIC ELEMENT: NAV ============ -->
+    <nav>
+        <ul class="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#students">Students</a></li>
+            <li><a href="#registration">Registration</a></li>
+            <li><a href="#media">Media</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- ================= PART A: BASIC HTML ================= -->
+        <section id="about">
+            <h2>Part A: About the College</h2>
+
+            <article>
+                <h3>College Information</h3>
+                <p>
+                    ABC College of Engineering was established in <b>1998</b> and is
+                    affiliated to a State Technical University. The college offers
+                    <i>undergraduate</i> and <u>postgraduate</u> programs in various
+                    engineering disciplines.
+                </p>
+
+                <!-- Text formatting: Bold, Italic, Underline, Superscript, Subscript -->
+                <p>
+                    Our college ranks 1<sup>st</sup> in the district for placements.
+                    The chemical formula taught in our Chemistry lab, H<sub>2</sub>O,
+                    is a common example of subscript usage.
+                </p>
+            </article>
+
+            <!-- Unordered List -->
+            <h3>Departments Offered</h3>
+            <ul>
+                <li>Computer Science &amp; Engineering</li>
+                <li>Information Technology</li>
+                <li>Electronics &amp; Communication Engineering</li>
+                <li>Mechanical Engineering</li>
+            </ul>
+
+            <!-- Ordered List -->
+            <h3>Admission Procedure (Steps)</h3>
+            <ol>
+                <li>Fill the online application form</li>
+                <li>Upload required documents</li>
+                <li>Pay the application fee</li>
+                <li>Attend counselling / entrance exam</li>
+                <li>Confirm seat allotment</li>
+            </ol>
+
+            <!-- Hyperlinks -->
+            <h3>Useful Links</h3>
+            <p>
+                Visit our official website:
+                <a href="https://www.example-college.edu" target="_blank" rel="noopener">College Website</a>
+                &nbsp;|&nbsp;
+                Search more on
+                <a href="https://www.google.com" target="_blank" rel="noopener">Google</a>
+            </p>
+        </section>
+
+        <!-- ================= PART B: TABLES AND IMAGES ================= -->
+        <section id="students">
+            <h2>Part B: Student Details & Images</h2>
+
+            <h3>Student Details Table</h3>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <caption>List of Registered Students</caption>
+                <thead>
+                    <tr>
+                        <th>Roll No</th>
+                        <th>Name</th>
+                        <th>Branch</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>Aditya Sharma</td>
+                        <td>CSE</td>
+                        <td>aditya101@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>Priya Reddy</td>
+                        <td>IT</td>
+                        <td>priya102@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>103</td>
+                        <td>Karthik Rao</td>
+                        <td>ECE</td>
+                        <td>karthik103@example.com</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>College Logo &amp; Campus Image</h3>
+            <!-- Images with alternate text -->
+            <img src="images/college-logo.png" alt="ABC College Logo" width="120" height="120">
+            <img src="images/campus.jpg" alt="College Campus Building" width="300" height="200">
+
+            <h3>Embedded Map (Iframe Example)</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1!2d0!3d0"
+                width="400" height="250"
+                title="College Location Map"
+                loading="lazy">
+            </iframe>
+        </section>
+
+        <!-- ================= PART C: FORMS ================= -->
+        <section id="registration">
+            <h2>Part C: Student Registration Form</h2>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Registration Details</legend>
+
+                    <!-- Name -->
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+
+                    <!-- Email -->
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required><br><br>
+
+                    <!-- Password -->
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" minlength="6" required><br><br>
+
+                    <!-- Gender - Radio Buttons -->
+                    <p>Gender:</p>
+                    <input type="radio" id="male" name="gender" value="male" checked>
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label><br><br>
+
+                    <!-- Hobbies - Checkboxes -->
+                    <p>Hobbies:</p>
+                    <input type="checkbox" id="reading" name="hobbies" value="reading">
+                    <label for="reading">Reading</label>
+
+                    <input type="checkbox" id="sports" name="hobbies" value="sports">
+                    <label for="sports">Sports</label>
+
+                    <input type="checkbox" id="music" name="hobbies" value="music">
+                    <label for="music">Music</label><br><br>
+
+                    <!-- Branch - Dropdown -->
+                    <label for="branch">Branch:</label>
+                    <select id="branch" name="branch">
+                        <option value="cse">Computer Science &amp; Engineering</option>
+                        <option value="it">Information Technology</option>
+                        <option value="ece">Electronics &amp; Communication</option>
+                        <option value="mech">Mechanical Engineering</option>
+                    </select><br><br>
+
+                    <!-- Comments - Textarea -->
+                    <label for="comments">Comments:</label><br>
+                    <textarea id="comments" name="comments" rows="4" cols="40"
+                        placeholder="Any additional information..."></textarea><br><br>
+
+                    <!-- Submit and Reset -->
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </fieldset>
+            </form>
+        </section>
+
+        <!-- ================= PART D: HTML5 FEATURES ================= -->
+        <section id="media">
+            <h2>Part D: HTML5 Multimedia &amp; Input Types</h2>
+
+            <article>
+                <h3>Audio Example</h3>
+                <audio controls>
+                    <source src="media/college-anthem.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+
+                <h3>Video Example</h3>
+                <video width="320" height="240" controls>
+                    <source src="media/campus-tour.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </article>
+
+            <article>
+                <h3>HTML5 Input Types</h3>
+                <form action="#">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob"><br><br>
+
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="15" max="60"><br><br>
+
+                    <label for="favcolor">Favourite Color:</label>
+                    <input type="color" id="favcolor" name="favcolor"><br><br>
+
+                    <label for="satisfaction">Satisfaction Level:</label>
+                    <input type="range" id="satisfaction" name="satisfaction" min="0" max="10"><br><br>
+
+                    <label for="altemail">Alternate Email:</label>
+                    <input type="email" id="altemail" name="altemail">
+                </form>
+            </article>
+        </section>
+
+    </main>
+
+    <!-- ============ HTML5 SEMANTIC ELEMENT: FOOTER ============ -->
+    <footer>
+        <p>&copy; 2026 ABC College of Engineering. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
