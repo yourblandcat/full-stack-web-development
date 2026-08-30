@@ -17,7 +17,7 @@ fs.writeFile('newfile.txt', content, err => {
 
 
 
-fs.appendFile('newfile.txt', '\ndhurandhar.', err => {
+fs.appendFile('newfile.txt', '\n dhurandhar.', err => {
   if (err) throw err;
   console.log('appended');
 });
