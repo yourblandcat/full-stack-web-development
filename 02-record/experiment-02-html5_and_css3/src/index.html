@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Styled Webpage</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- ===== Header ===== -->
+    <header>
+        <h1>My Styled Webpage</h1>
+        <p>HTML5 Graphics and CSS3 Web Styling</p>
+    </header>
+
+    <!-- ===== Navigation Bar ===== -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- ===== Part A: HTML5 Canvas ===== -->
+    <section class="canvas-section">
+        <h2>Part A: HTML5 Canvas Drawing</h2>
+        <canvas id="myCanvas" width="500" height="300"></canvas>
+    </section>
+
+    <!-- ===== Part B: Content Cards ===== -->
+    <section class="cards-container">
+
+        <div class="card">
+            <h2>Card One</h2>
+            <p>This card demonstrates border radius, box shadow, and hover effects using CSS3.</p>
+            <button>Learn More</button>
+        </div>
+
+        <div class="card">
+            <h2>Card Two</h2>
+            <p>Gradient backgrounds and text shadows are applied to enhance visual appeal.</p>
+            <button>Learn More</button>
+        </div>
+
+        <div class="card">
+            <h2>Card Three</h2>
+            <p>Margins, padding, and fonts are combined to create a clean card layout.</p>
+            <button>Learn More</button>
+        </div>
+
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+        &copy; 2026 My Styled Webpage | Created by Vijay Anudeep
+    </footer>
+
+    <!-- ===== JavaScript for Canvas Drawing ===== -->
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // 1. Draw a Rectangle
+        ctx.fillStyle = '#4b6cb7';
+        ctx.fillRect(30, 30, 150, 80);
+        ctx.strokeStyle = '#182848';
+        ctx.lineWidth = 3;
+        ctx.strokeRect(30, 30, 150, 80);
+
+        // 2. Draw a Circle
+        ctx.beginPath();
+        ctx.arc(300, 70, 50, 0, Math.PI * 2);
+        ctx.fillStyle = '#ffe600';
+        ctx.fill();
+        ctx.strokeStyle = '#182848';
+        ctx.lineWidth = 3;
+        ctx.stroke();
+
+        // 3. Draw a Line
+        ctx.beginPath();
+        ctx.moveTo(30, 180);
+        ctx.lineTo(450, 180);
+        ctx.strokeStyle = '#182848';
+        ctx.lineWidth = 4;
+        ctx.stroke();
+
+        // 4. Display Name as Text
+        ctx.font = "bold 30px 'Georgia', serif";
+        ctx.fillStyle = '#182848';
+        ctx.fillText("Vijay Anudeep", 130, 250);
+    </script>
+
+</body>
+</html>
