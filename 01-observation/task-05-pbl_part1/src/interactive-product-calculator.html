@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Product Calculator</title>
+</head>
+<body>
+    <h2>Product Calculator</h2>
+    
+    <!-- Input fields for product details -->
+    <label>Product Name: <input type="text" id="pName" value="Headphones"></label><br><br>
+    <label>Quantity: <input type="number" id="qty" value="1" min="1"></label><br><br>
+    <label>Price ($): <input type="number" id="price" value="50" min="0"></label><br><br>
+    
+    <!-- Dynamic output display -->
+    <h3>Total Price: $<span id="totalPrice">50.00</span></h3>
+
+    <script>
+        // Select DOM elements
+        const qtyInput = document.getElementById('qty');
+        const priceInput = document.getElementById('price');
+        const totalDisplay = document.getElementById('totalPrice');
+
+        // Function to calculate and update the total price
+        function calculateTotal() {
+            // Parse values, defaulting to 0 if invalid
+            const quantity = parseFloat(qtyInput.value) || 0;
+            const price = parseFloat(priceInput.value) || 0;
+            
+            // Update the DOM with the formatted total
+            totalDisplay.textContent = (quantity * price).toFixed(2);
+        }
+
+        // Event listeners trigger recalculation on any input change
+        qtyInput.addEventListener('input', calculateTotal);
+        priceInput.addEventListener('input', calculateTotal);
+    </script>
+</body>
+</html>

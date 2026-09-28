@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation Demo</title>
+    <style>
+        /* Initial base styling */
+        .box {
+            padding: 30px;
+            border: 2px solid #333;
+            width: 250px;
+            text-align: center;
+            font-family: sans-serif;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Target Element -->
+    <div id="targetElement" class="box" data-status="original" title="Unmodified Element">
+        Original Content
+    </div>
+
+    <!-- Trigger Button -->
+    <button onclick="modifyElement()">Manipulate DOM</button>
+
+    <script>
+        function modifyElement() {
+            // Target the specific element in the DOM tree
+            const el = document.getElementById('targetElement');
+
+            // 1. Change Content
+            el.innerHTML = "<strong>Content Dynamically Changed!</strong>";
+
+            // 2. Change Style
+            el.style.backgroundColor = "#e0f7fa";
+            el.style.color = "#006064";
+            el.style.borderRadius = "12px";
+            el.style.borderColor = "#00acc1";
+
+            // 3. Change Attributes
+            el.setAttribute('data-status', 'modified'); // Update custom data attribute
+            el.title = "Element successfully modified by JavaScript"; // Update title attribute
+        }
+    </script>
+</body>
+</html>
