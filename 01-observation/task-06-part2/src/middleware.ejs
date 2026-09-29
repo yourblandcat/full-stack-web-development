@@ -1,0 +1,28 @@
+// TASK 8: EXPRESS.JS MIDDLEWARE
+// Note: Ensure Express is installed via 'npm install express'
+const express = require('express');
+const app = express();
+const PORT = 3000;
+
+// Middleware for logging incoming requests
+const requestLogger = (req, res, next) => {
+    // Capture the current time, HTTP method, and requested URL
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${req.method} request made to: ${req.url}`);
+    
+    // CRITICAL: Pass control to the next middleware or route handler
+    next(); 
+};
+
+// Mount the middleware globally so it runs on every incoming request
+app.use(requestLogger);
+
+// Define a basic route
+app.get('/', (req, res) => {
+    res.status(200).send('Middleware testing successful!');
+});
+
+// Start the server
+app.listen(PORT, () => {
+    console.log(`Server is actively running on http://localhost:${PORT}`);
+});
